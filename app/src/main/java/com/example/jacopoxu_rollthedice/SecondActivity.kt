@@ -1,5 +1,6 @@
 package com.example.jacopoxu_rollthedice
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -31,5 +32,9 @@ class SecondActivity : AppCompatActivity() {
         }
         imageViewSecond.setImageResource(resource)
         Log.d("SECOND", "FINITO DISEGNO DADO")
+
+        var mioIntent : Intent = Intent(this, ThirdActivity::class.java)
+        mioIntent.putExtra("RANDOM", random)
+        startActivity(mioIntent)
         }
     }
